@@ -7,7 +7,10 @@
     "deploy": "graph deploy --node https://api.thegraph.com/deploy/ n2n/chats",
     "create-local": "graph create --node http://localhost:8020/ n2n/chats",
     "remove-local": "graph remove --node http://localhost:8020/ n2n/chats",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 n2n/chats",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 socialbureau/chats",
+    "deploy:goerli": "graph deploy --product hosted-service doctornasa/n2n-goerli --network=goerli --network-file=networks.json",
+    "deploy:sepolia": "graph deploy --product hosted-service doctornasa/n2n-sepolia --network=sepolia --network-file=networks.json",
+    "deploy:linea_sepolia": "graph deploy --product hosted-service doctornasa/n2n-linea_goerli --network=sepolia --network-file=networks.json",
     "test": "graph test"
   },
   "dependencies": {
