@@ -12,9 +12,9 @@ type ChatInitialized @entity(immutable: true) {
 type UserInitialized @entity(immutable: true) {
   id: Bytes!
   user: Bytes! # address
-  init_encryptedUserSecret: Bytes! # bytes
-  init_publicKeyPrefix: Boolean! # bool
-  init_publicKeyX: Bytes! # bytes32
+  encryptedUserSecret: Bytes! # bytes
+  publicKeyPrefix: Boolean! # bool
+  publicKeyX: Bytes! # bytes32
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
