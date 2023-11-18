@@ -16,7 +16,6 @@ export function handleChatInitialized(event: ChatInitializedEvent): void {
   entity.blockNumber = event.block.number
   entity.blockTimestamp = event.block.timestamp
   entity.transactionHash = event.transaction.hash
-
   entity.save()
 }
 
@@ -25,9 +24,9 @@ export function handleUserInitialized(event: UserInitializedEvent): void {
     event.transaction.hash.concatI32(event.logIndex.toI32())
   )
   entity.user = event.params.user
-  entity.init_encryptedUserSecret = event.params.init.encryptedUserSecret
-  entity.init_publicKeyPrefix = event.params.init.publicKeyPrefix
-  entity.init_publicKeyX = event.params.init.publicKeyX
+  entity.encryptedUserSecret = event.params.init.encryptedUserSecret
+  entity.publicKeyX = event.params.init.publicKeyX
+  entity.publicKeyPrefix = event.params.init.publicKeyPrefix
 
   entity.blockNumber = event.block.number
   entity.blockTimestamp = event.block.timestamp
