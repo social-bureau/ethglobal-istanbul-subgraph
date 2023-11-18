@@ -4,5 +4,17 @@
       "address": "0xf7a126aDe9268742409BBe4B1f79243c6430605A",
       "startBlock": 4716377
     }
+  },
+  "goerli": {
+    "Prontera": {
+      "address": "0xf7a126aDe9268742409BBe4B1f79243c6430605A",
+      "startBlock": 10063414
+    }
+  },
+  "linea-goerli": {
+    "Prontera": {
+      "address": "0xf7a126aDe9268742409BBe4B1f79243c6430605A",
+      "startBlock": 2046031
+    }
   }
 }
