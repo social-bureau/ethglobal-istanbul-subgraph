@@ -1,0 +1,27 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Prontera
+    network: sepolia
+    source:
+      address: "0xf7a126aDe9268742409BBe4B1f79243c6430605A"
+      abi: Prontera
+      startBlock: 4716377
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - ChatInitialized
+        - UserInitialized
+      abis:
+        - name: Prontera
+          file: ./abis/Prontera.json
+      eventHandlers:
+        - event: ChatInitialized(indexed address,indexed address,bytes,bytes)
+          handler: handleChatInitialized
+        - event: UserInitialized(indexed address,(bytes,bool,bytes32))
+          handler: handleUserInitialized
+      file: ./src/prontera.ts

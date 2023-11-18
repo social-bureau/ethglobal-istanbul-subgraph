@@ -1,0 +1,21 @@
+type ChatInitialized @entity(immutable: true) {
+  id: Bytes!
+  initializer: Bytes! # address
+  peer: Bytes! # address
+  callerEncryptedChatSecret: Bytes! # bytes
+  peerEncryptedChatSecret: Bytes! # bytes
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type UserInitialized @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  init_encryptedUserSecret: Bytes! # bytes
+  init_publicKeyPrefix: Boolean! # bool
+  init_publicKeyX: Bytes! # bytes32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
